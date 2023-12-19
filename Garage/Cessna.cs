@@ -1,12 +1,16 @@
 namespace Garage
 {
-    public class Cessna : Vehicle  // Propellor light aircraft
+    public class Cessna : Vehicle, IGas // Propellor light aircraft
     {
         public double FuelCapacity { get; set; }
 
+        public double CurrentTankPercentage { get; set; }
+
+         public string Name { get; set; } = string.Empty;
+
         public void RefuelTank()
         {
-            // method definition omitted
+              CurrentTankPercentage = 100.0;
         }
 
         public override void Drive()
